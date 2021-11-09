@@ -39,6 +39,7 @@ class FibonacciTable {
   FibonacciTable(Map<Integer, Integer> cache) {
     cache.put(0, 0);
     cache.put(1, 1);
+    cache.put(2, 1);
     this.cache = cache;
   }
 
