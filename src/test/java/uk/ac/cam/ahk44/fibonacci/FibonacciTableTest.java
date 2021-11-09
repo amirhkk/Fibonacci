@@ -20,11 +20,25 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+import static com.google.common.truth.Truth.assertThat;
+
 @RunWith(JUnit4.class)
 public class FibonacciTableTest {
 
   @Test
   public void fib_makesUseOfCache() {
+    // ARRANGE
+    CountingMap countingmap = new CountingMap();
+    FibonacciTable fibonacci = new FibonacciTable(countingmap);
+
+    // ACT
+    int result = fibonacci.fib(20);
+    int cnt = countingmap.getCounter();
+
+    // ASSERT
+    assertThat(result).isEqualTo(6765);
+    assertThat(cnt).isEqualTo(39);
+
     // Hint: use CountingMap!
   }
 }
