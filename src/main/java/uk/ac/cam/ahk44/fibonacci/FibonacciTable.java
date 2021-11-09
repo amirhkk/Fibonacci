@@ -37,6 +37,8 @@ class FibonacciTable {
    * @param cache the cache to use for storing computed values
    */
   FibonacciTable(Map<Integer, Integer> cache) {
+    cache.put(0, 0);
+    cache.put(1, 1);
     this.cache = cache;
   }
 
@@ -49,7 +51,7 @@ class FibonacciTable {
   int fib(int i) {
     if(i < 0) throw new IllegalArgumentException("Error: Number is negative.");
     if(!cache.containsKey(i)){
-      int v = i <= 1 ? i : fib(i - 1) + fib(i - 2);
+      int v = fib(i - 1) + fib(i - 2);
       cache.put(i, v);
       return v;
     }
