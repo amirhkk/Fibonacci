@@ -28,19 +28,7 @@ public class FibonacciTableTest {
   @Test
   public void fib_makesUseOfCache() {
     // ARRANGE
-    CountingMap countingmap = new CountingMap();
-    FibonacciTable fibonacci = new FibonacciTable(countingmap);
 
-    // ACT
-    fibonacci.fib(10);
-    int cnt = countingmap.getCounter();
-
-    // ASSERT
-    assertThat(cnt).isGreaterThan(5);
-
-    fibonacci.fib(20);
-    cnt = countingmap.getCounter();
-    assertThat(cnt).isGreaterThan(10);
 
     // Hint: use CountingMap!
   }
