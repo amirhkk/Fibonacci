@@ -36,6 +36,12 @@ public class FibonacciTest {
 
     // ASSERT
     assertThat(result).isEqualTo(1);
+
+    // ACT
+    result = fibonacci.fib(20);
+
+    // ASSERT
+    assertThat(result).isEqualTo(6765);
   }
 
   @Test
