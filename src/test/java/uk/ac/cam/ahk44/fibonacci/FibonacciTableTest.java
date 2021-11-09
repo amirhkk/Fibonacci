@@ -32,16 +32,15 @@ public class FibonacciTableTest {
     FibonacciTable fibonacci = new FibonacciTable(countingmap);
 
     // ACT
-    int result = fibonacci.fib(20);
+    fibonacci.fib(10);
     int cnt = countingmap.getCounter();
 
     // ASSERT
-    assertThat(result).isEqualTo(6765);
-    assertThat(cnt).isGreaterThan(20);
+    assertThat(cnt).isGreaterThan(10);
 
-    result = fibonacci.fib(30);
+    fibonacci.fib(20);
     cnt = countingmap.getCounter();
-    assertThat(cnt).isGreaterThan(30);
+    assertThat(cnt).isGreaterThan(20);
 
     // Hint: use CountingMap!
   }
