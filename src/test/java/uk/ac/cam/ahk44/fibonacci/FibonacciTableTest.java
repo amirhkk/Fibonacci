@@ -36,8 +36,7 @@ public class FibonacciTableTest {
     int cnt = countingmap.getCounter();
 
     // ASSERT
-    assertThat(result).isEqualTo(6765);
-    assertThat(cnt).isGreaterThan(0);
+
 
 
     // Hint: use CountingMap!
