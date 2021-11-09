@@ -42,6 +42,13 @@ class FibonacciTable {
     cache.put(2, 1);
     cache.put(3, 2);
     cache.put(4, 3);
+    cache.put(5, 5);
+    cache.put(6, 8);
+    cache.put(7, 13);
+    cache.put(8, 21);
+    cache.put(9, 34);
+    cache.put(10,55);
+
     this.cache = cache;
   }
 
