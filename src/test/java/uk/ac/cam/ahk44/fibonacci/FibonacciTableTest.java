@@ -37,7 +37,11 @@ public class FibonacciTableTest {
 
     // ASSERT
     assertThat(result).isEqualTo(6765);
-    assertThat(cnt).isEqualTo(39);
+    assertThat(cnt).isGreaterThan(20);
+
+    result = fibonacci.fib(30);
+    cnt = countingmap.getCounter();
+    assertThat(cnt).isGreaterThan(30);
 
     // Hint: use CountingMap!
   }
