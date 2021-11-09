@@ -36,11 +36,11 @@ public class FibonacciTableTest {
     int cnt = countingmap.getCounter();
 
     // ASSERT
-    assertThat(cnt).isGreaterThan(10);
+    assertThat(cnt).isGreaterThan(5);
 
     fibonacci.fib(20);
     cnt = countingmap.getCounter();
-    assertThat(cnt).isGreaterThan(20);
+    assertThat(cnt).isGreaterThan(10);
 
     // Hint: use CountingMap!
   }

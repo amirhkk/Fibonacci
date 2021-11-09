@@ -48,7 +48,11 @@ class FibonacciTable {
    */
   int fib(int i) {
     if(i < 0) throw new IllegalArgumentException("Error: Number is negative.");
-    if(!cache.containsKey(i)) cache.put(i, i == 0 ? 0 : i == 1 ? 1 : fib(i - 1) + fib(i - 2));
+    if(!cache.containsKey(i)){
+      int v = i <= 1 ? i : fib(i - 1) + fib(i - 2);
+      cache.put(i, v);
+      return v;
+    }
     return cache.get(i);
     // use the provided cache to reuse computed values
     // cache.containsKey(4) will return true if there is a value stored for the index 4
